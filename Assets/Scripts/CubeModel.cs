@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CubeModel 
+public class CubeModel : ICubeModel
 {
     public int Value { get; private set; }
     public int Score { get; private set; }
@@ -16,7 +16,7 @@ public class CubeModel
     public void SetValue(int value) => Value = value;
 
     public void AddScore(int amount) => Score += amount;
-     
+
     public void TakeDamage(int amount) => Health = Mathf.Max(Health - amount, 0);
 
     
